@@ -30,6 +30,17 @@ EFI Hackintosh B560M MSI MAG MORTAR NON WIFI
 MAG B560M MORTAR NON WIFI DDR4 BIOS download link https://www.msi.com/Motherboard/MAG-B560M-MORTAR/support
 ![tbTDlD](#####)
 
+### Resizable BAR (ReBAR)
+
+AMD Radeon 6600 cards support ReBAR. To activate this feature you must:
+
+Enable it in BIOS menu (usually next to Above 4G Decoding option, ReBAR is displayed when enabling this other option)
+Set config file.plist in order for OpenCore to boot with ReBAR enabled, you have to set the value of Boot >> Quirks >> ResizeAppleGpuBars=0 (instead of -1, default value).
+
+Note: UEFI >> Quirks >> ResizeGpuBars must always be -1.
+
+I have tested the card with ReBAR on and off and I have not noticed any difference. If any of you who read this, i need your help to confirm this, maybe testing using Windows, and Compare it. Thank You.
+
 # Detail:
 [Contact Me: ###### "Instagram")
 
